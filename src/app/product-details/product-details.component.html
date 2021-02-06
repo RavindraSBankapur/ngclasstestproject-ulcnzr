@@ -1,0 +1,11 @@
+<h2>Product Details </h2>
+<div>
+	<h3>{{product.name}}</h3>
+	<h3>{{product.description}}</h3>
+	<h3>{{product.price | currency }}</h3>
+	<p>Discounted Price: {{product.price | currency:"INR"}}</p>
+
+	<p [style]="'text-decoration: line-through'">Actual Price: {{product.price | double | currency:"INR"}}</p>
+	<p appHighlight> Product Description: {{ product.description }}</p>
+	<button (click)="addToCart(product)">Add To Cart</button>
+</div>
